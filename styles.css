@@ -1,0 +1,94 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: black;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to right, #cccccc, #9b9b9b);
+}
+
+.calculator-grid {
+  display: grid;
+  margin: auto;
+  margin-top: 12vh;
+  max-width: 450px;
+  height: 680px;
+  justify-content: center;
+  align-content: center;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(100px, auto) repeat(5, 100px);
+  border: 15px solid #000;
+  border-radius: 30px;
+  background-color: #000;
+  box-shadow: 0px 0px 50px 0px rgba(0, 0, 0, .5);
+}
+
+.calculator-grid > button {
+  margin: 0.2em;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  border-radius: 3em;
+  outline: none;
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  margin-bottom: 1em;
+  grid-column: 1 / -1;
+  background-color: #000;
+  display: flex;
+  min-height: 110px;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.output .previous-operand {
+  color: rgba(255, 255,255, .75);
+  font-size: 1rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2rem;
+}
+
+#orange-button {
+  background-color: #f1a33c;
+  color: white;
+}
+
+#orange-button:hover {
+  background-color: #f3c995;
+  transition: 0.5s ease-in-out;
+}
+
+#number-button {
+  background-color: #444;
+  color: white;
+}
+
+#number-button:hover {
+  background-color: #888;
+  transition: 0.5s ease-in-out;
+}
+
+#del-button {
+  background-color: rgb(196, 196, 196);
+  font-size: 1.5rem;
+}
+
+#del-button:hover {
+  background-color:rgb(229, 228, 228);
+  transition: 0.5s ease-in-out;
+}
